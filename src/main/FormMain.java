@@ -49,7 +49,7 @@ public class FormMain {
                 if (comboBox2.getSelectedIndex() == 1) {
                     string.setInputeText(inputtext.getText());
 
-                    if (comboBox1.getSelectedIndex() == 0) {
+                    if (comboBox1.getSelectedIndex() == 0) {// SO FUNCIONA ENTRADAS COM LETRAS MAIUSCULAS
                         returntext.setText(string.cesarCypher());
                     }
                     if (comboBox1.getSelectedIndex() == 1) {
@@ -59,7 +59,9 @@ public class FormMain {
                         returntext.setText(string.cleanInputText());
                     }
                     if (comboBox1.getSelectedIndex() == 3) {
+                        string.setExpression(inputtext.getText());
                         returntext.setText(string.scheduleExpression());
+
                     }
                 }
 
@@ -73,6 +75,7 @@ public class FormMain {
                     }
                     if (comboBox1.getSelectedIndex() == 2) {
                         returntext.setText(String.valueOf(numeric.generateNumberSequence(inputtext.getText())));
+
                     }
                 }
             }
@@ -82,6 +85,7 @@ public class FormMain {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setContentPane(new FormMain().panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }

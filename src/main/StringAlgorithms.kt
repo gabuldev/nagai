@@ -53,9 +53,9 @@ class StringAlgorithms(title: String, author: String, version: String, descripti
     }
 
     fun countOcurrences() : String {
-        this.letters = "abcdefghijklmnopqrstuvwxyz"
+        this.letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         var size=this.inputText.length
-        var i = 0..25
+        var i = 0..50
         var i2 = 0..size-1
         var letter : Char
         var numb = 0
